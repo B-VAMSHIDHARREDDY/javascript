@@ -8,14 +8,3 @@ testComponent.testFunc();
 const es6Component = new app.newFeature();
 console.log(es6Component)
 es6Component.testFunc();
-
-
-
-
-
-
-
-
-
-
-
