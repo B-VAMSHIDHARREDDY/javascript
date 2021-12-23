@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "dir-to-json": "^0.0.3"
+  }
+}
