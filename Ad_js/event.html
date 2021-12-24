@@ -1,0 +1,27 @@
+ <img src="off.jfif" id = "image" width="150px" height="150px"/>
+ 
+ <p id ="demo">Action Pareagraph</p>
+
+ <button onclick="s=action()" onmouseover="mousehover()">Action Button</button>
+
+
+ <script>
+     function action(){
+         document.getElementById("demo").textContent = "You pressed the button";
+
+     }
+     function mousehover(){
+         document.getElementById("demo").textContent = "You pressed the button";
+
+     }
+
+     function changeimage(){
+         document.getElementById("image").src="on.jfif";
+     }
+    //  document.getElementById("image").onmouseover = changeimage;
+    //  document.getElementById("image").onmouseout = function() {document.getElementById("image").src = "off.jfif";};
+    
+     document.getElementById("image").addEventListener("mouseover",changeimage);
+     document.getElementById("image").addEventListener("mouseout",function() {document.getElementById("image").src = "off.jfif";})
+     </script>
+

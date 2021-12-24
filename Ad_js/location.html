@@ -1,0 +1,18 @@
+ <h1>Location of the client</h1>
+ <p id="demo">Here lat long will be shown</p>
+ <button onclick="getLocation()">Click to get Location</button>
+ <script>
+     p = document.getElementById("demo");
+     function getLocation(){
+         if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(pos) {
+                 p.innerHTML = "Latitude: "+pos.coords.latitude 
+                 + ", "+"Longitude: " +pos.coords.longitude
+
+             });
+         }
+         else{
+            p.innerHTML = "Location not suport your browser"
+         }
+     }
+ </script>
