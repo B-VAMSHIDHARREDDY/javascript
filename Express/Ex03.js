@@ -7,10 +7,10 @@ let database;
 //Mongdb-Express-Angular-NodeJs Stack
 mongo.connect(url, (err, mgCl)=>{
     database = mgCl.db("sampledatabase")//get the database
-    database.collection("employees").find().toArray((e, res)=>{
+    database.collection("employee").find().toArray((e, res)=>{
         res.forEach((value)=>{
             //console.log(`${JSON.stringify(value)}`)
-            console.log(`${value.empName} from ${value.empAddress}`)
+            console.log(`${value.name} from ${value.address}`)
         })
     })
 })

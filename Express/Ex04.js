@@ -24,15 +24,15 @@ getConnection();
 /*
 Gets the data from the employees collection, converts it into any array of JS objects and sends it as response to the caller.  
 */
-app.get("/Employees", (req, res)=>{
-    db.collection("employees").find().toArray((e, result)=>{
+app.get("/Employee", (req, res)=>{
+    db.collection("employee").find().toArray((e, result)=>{
         res.send(result)//Returns data as JSON object Array.
     })
 })
 
-app.get("/Employees/:id", (req, res)=>{
+app.get("/Employee/:id", (req, res)=>{
     const id = parseInt(req.params.id)
-    db.collection("employees").find({"empId": id}).toArray((e, result)=> res.send(result))
+    db.collection("employee").find({"empId": id}).toArray((e, result)=> res.send(result))
 })
 
 
