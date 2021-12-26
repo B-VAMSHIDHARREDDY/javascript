@@ -1,0 +1,14 @@
+<canvas id="mycanvas" width="200" height="100" style="border:1px solid grey;"></canvas>
+
+<script>
+    var c = document.getElementById("mycanvas")
+    var ctx = c.getContext("2d")
+    /* Create Arc
+    ctx.beginPath();
+    ctx.arc(90, 50, 40, 0, Math.PI); // half curve
+    ctx.arc(90, 50, 40, 0, 2 * Math.PI); // circle
+    ctx.stroke(); */
+    ctx.moveTo(10,20);
+    ctx.lineTo(500,600)
+    ctx.stroke();
+</script>

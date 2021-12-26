@@ -1,0 +1,14 @@
+<!-- <img width="200" height="150" alt="profile pic" id="img"> -->
+<video controls muted id ="vid">
+    <source src="" type="video/mp4">
+</video>
+<label>select File</label><input type="file" id = "file">
+
+<script>
+    document.getElementById("file").onchange=function(){
+       // it is not work var path = document.getElementById("file").value;
+        var path = URL.createObjectURL(document.getElementById("file").files[0])
+        document.getElementById("vid").src = path;
+        document.getElementById("vid").play();
+    }
+</script>
