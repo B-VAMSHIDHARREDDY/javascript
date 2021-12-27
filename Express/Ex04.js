@@ -30,7 +30,7 @@ app.get("/Employee", (req, res)=>{
     })
 })
 
-app.get("/Employee/:id", (req, res)=>{
+app.get("/Employees/:id", (req, res)=>{
     const id = parseInt(req.params.id)
     db.collection("employee").find({"empId": id}).toArray((e, result)=> res.send(result))
 })

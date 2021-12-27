@@ -1,0 +1,19 @@
+<video controls muted autoplay width= "200" id="vid">
+    <source src="1.mp4" type="video/mp4">
+</video>
+<button onclick="takeScreenshot()">Take Screenshot</button>
+<img id="snap" width="400">
+
+<script>
+    function takeScreenshot(){
+        var canvas = document.createElement("canvas");
+        canvas.width=640;
+        canvas.height=480;
+        var ctx = canvas.getContext("2d");
+        var video = document.getElementById("vid");
+        ctx.drawImage(video,0,0,canvas.width,canvas.height);
+        var url = canvas.toDataURL("image/jpeg");
+        document.getElementById("snap").src = url;
+
+    }
+</script>
