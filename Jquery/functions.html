@@ -1,0 +1,53 @@
+
+
+<div id="di" style="border:2px solid blue; width: 50px;height: 100px;">This is a div</div>
+<h1>Dispaly Test</h1>
+<p id="para" style="display: none;" >
+    GitHub, Inc. is a provider of Internet hosting for software development and version control using Git.
+    It offers the distributed version control and source code management functionality of Git, plus its own features.
+    It provides access control and several collaboration features such as bug tracking, feature requests, task management, 
+    continuous integration and wikis for every project. Headquartered in California, it has been a subsidiary of Microsoft since 2018.
+    GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. 
+    It offers the distributed version control and source code management functionality of Git, plus its own features. 
+    It provides access control and several collaboration features such as bug tracking, feature requests, task management,
+    continuous integration and wikis for every project.
+    Headquartered in California, it has been a subsidiary of Microsoft since 2018. </p>
+<button onclick="change()">Change</button>
+<script src="jquery.js"></script>
+
+<script>
+    function change() {
+
+        // // Hiden the data
+        // $("h1").hide();
+        // //Show hiden data
+        // $("#para").show()
+
+        //Toggle Dispaly
+        // $("h1,p").toggle();
+
+        // Slid down a hidden element
+        // $("p").slideDown(5000);
+
+        // slide up an elemnet
+        //$("p").slideUp("slow");
+
+        // slide up and down
+        // $("p").slideToggle("slow")
+
+        //Fade In - Display slowly
+        // $("p").fadeIn()
+        
+        //Fade Out - Display slowly
+        // $("p").fadeOut()
+
+        //Fade Toggle
+        // $("h1").fadeToggle(5000);
+
+        //Animate
+        $("#di").animate({opacity:"0.5",width: "+=100px",height:"+=100px"},5000);
+
+
+    }
+
+</script>

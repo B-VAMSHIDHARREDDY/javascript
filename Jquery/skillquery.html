@@ -1,0 +1,49 @@
+<style>
+    #skillset {
+        border: 2px solid red;
+        width: 400px;
+        height: 200px;
+        margin-top: 10px;
+    }
+
+    .singleSkill {
+        padding: 3px;
+        background-color: black;
+        color: white;
+        display: inline-block;
+        margin: 2px;
+    }
+</style>
+
+Skill <input type="text" id="skill">
+<button id='btn'>Add</button>
+
+<div id="skillset">
+    <!-- <div class="singleSkill">HTML<img src="1.png" height="15"></div>
+    <div class="singleSkill">C++ <img src="1.png" height="15"></div> -->
+</div>
+<script src="jquery.js"></script>
+<script>
+    // function addSkill(){
+    //     var singleSkill = document.createElement("div");
+    //     singleSkill.className = "singleSkill";
+    //     var skillvalue = document.getElementById("skill").value;
+    //     singleSkill.innerHTML = skillvalue;
+    //     var crossImage = document.createElement("img");
+    //     crossImage.src = "1.png";
+    //     crossImage.height = 15;
+    //     crossImage.onclick = function(){this.parentNode.remove() };
+    //     singleSkill.appendChild(crossImage);
+    //     document.getElementById("skillset").appendChild(singleSkill);
+    //     document.getElementById("skill").value = "";
+    // }
+    $(function(){
+        $("#btn").click(function(){
+            $("#skillset").append(
+            $("<div></div>").html($('#skill').val()).addClass("singleSkill").append(   $("<img/>").attr("src","1.png").css({"height":"15px","cursor":"pointer"}).click(function(){
+                $(this).parent().remove()
+            })))
+
+        });
+    });
+</script>
