@@ -2,7 +2,7 @@
 const http = require("http")
 const fs = require("fs")
 const httpParse = require('url').parse;
-const root = __dirname;//Const in NODEJS that gives the path of the current directory. 
+const root = __dirname; //Const in NODEJS that gives the path of the current directory. 
 
 //Function that puts the file output as a stream of text and pushes it into the response. 
 function displayPage(res, url){
@@ -19,10 +19,12 @@ function errorPage(res){
 }
 
 http.createServer((req, res)=>{
+    console.log("Server running...........")
     if(req.method =="GET"){
         const query = httpParse(req.url).query;//First check if there is a query string
         if(query != null){
             let obj = httpParse(req.url, true).query;//Converts the query string into an json object. 
+            console.log(obj)
             const content = `Thanks!! Mr.${obj.txtName}.\nUR Address ${obj.txtAddr} and other details are stored with us!. We will come back to you`;
             res.write(content)
             res.end();
